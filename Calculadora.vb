@@ -29,10 +29,6 @@
         txtResultado.Text = resultado
     End Sub
 
-    Private Sub txtResultado_TextChanged(sender As Object, e As EventArgs) Handles txtResultado.TextChanged
-
-    End Sub
-
     Private Sub btnResta_Click(sender As Object, e As EventArgs) Handles btnResta.Click
         Dim numero1 As Double
         Dim numero2 As Double
@@ -83,5 +79,19 @@
 
     Private Sub Label1_Click_1(sender As Object, e As EventArgs) Handles lblNombreAutor.Click
 
+    End Sub
+
+    Private Sub txtNumero1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumero1.KeyPress
+        e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) And Not e.KeyChar = "."
+        If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) And Not e.KeyChar = "." Then
+            MsgBox("No puedes colocar letras, solo números.")
+        End If
+    End Sub
+
+    Private Sub txtNumero2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumero2.KeyPress
+        e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) And Not e.KeyChar = "."
+        If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) And Not e.KeyChar = "." Then
+            MsgBox("No puedes colocar letras, solo números.")
+        End If
     End Sub
 End Class

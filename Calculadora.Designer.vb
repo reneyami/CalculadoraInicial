@@ -132,7 +132,7 @@ Partial Class Calculadora
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
+        Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Controls.Add(Me.lblNombreAutor)
         Me.Controls.Add(Me.lblFecha)
         Me.Controls.Add(Me.lblPrefecha)
